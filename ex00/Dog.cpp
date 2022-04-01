@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:28:18 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 05:22:33 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 05:29:21 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ Dog::~Dog() {
 void	Dog::makeSound() const {
 	std::cout << "woof!" << std::endl;
 }
-
-//Dog &	operator=(Dog const & rhs) {
-//	std::cout << CYAN;
-//	std::cout << "Dog Assignation operator called" << std::endl;
-//	std::cout << RESET;
-//	this->type = rhs.getType();
-//	return (*this);
-//}
