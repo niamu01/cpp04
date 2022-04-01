@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 05:29:45 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:40 by yeju             ###   ########.fr       */
+/*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
+/*   Updated: 2022/04/02 06:38:44 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-#define WRONGANIMAL_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
-#define RESET "\e[0m"
-#define PURPLE "\e[35m"
-#define GREEN "\e[32m"
-
-class WrongAnimal
+class Animal
 {
+
 public:
-	WrongAnimal();
-	WrongAnimal(WrongAnimal const &rhs);
-	~WrongAnimal();
+	Animal(void);
+	Animal(const Animal &src);
+	virtual ~Animal(void);
 
-	WrongAnimal &operator=(const WrongAnimal &rhs);
+	virtual Animal &operator=(const Animal &other);
 
-	void makeSound() const;
-	const std::string &getType() const;
+	virtual void makeSound(void) const;
+
+	const std::string &getType(void) const;
+
+	virtual Brain *getBrain(void) const = 0;
 
 protected:
 	std::string type;
+
+private:
 };
 
-std::ostream &operator<<(std::ostream &out, const WrongAnimal &wronganimal);
+std::ostream &operator<<(std::ostream &ostream, const Animal &instance);
 
 #endif

@@ -6,29 +6,33 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:28:18 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 05:29:21 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 06:40:23 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() {
+Dog::Dog()
+{
 	std::cout << CYAN;
 	std::cout << "Dog Default constructor called" << std::endl;
 	std::cout << RESET;
 	this->type = "Dog";
 }
-Dog::Dog(Dog const &rhs) {
+Dog::Dog(Dog const &rhs)
+{
 	std::cout << CYAN;
-	std::cout << "Dog Copy constructor called"  << std::endl;
+	std::cout << "Dog Copy constructor called" << std::endl;
 	std::cout << RESET;
 	*this = rhs;
 }
-Dog::~Dog() {
+Dog::~Dog()
+{
 	std::cout << CYAN;
-	std::cout << "Dog Destructor called"  << std::endl;
+	std::cout << "Dog Destructor called" << std::endl;
 	std::cout << RESET;
 }
-void	Dog::makeSound() const {
+void Dog::makeSound() const
+{
 	std::cout << "woof!" << std::endl;
 }

@@ -5,49 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 04:06:45 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:03 by yeju             ###   ########.fr       */
+/*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
+/*   Updated: 2022/04/02 06:37:27 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : type("")
+Animal::Animal(void) : type("")
 {
-	std::cout << "Animal Default constructor called" << std::endl;
+	std::cout << "Default constructor for Animal called" << std::endl;
+	return;
 }
 
-Animal::Animal(Animal const &rhs)
+Animal::Animal(Animal const &src)
 {
-	std::cout << "Animal Copy constructor called" << std::endl;
-	*this = rhs;
+	std::cout << "Copy constructor for Animal called" << std::endl;
+	*this = src;
+	return;
 }
 
-Animal::~Animal()
+Animal::~Animal(void)
 {
-	std::cout << "Animal Destructor called" << std::endl;
+	std::cout << "Destructor for Animal called" << std::endl;
+	return;
 }
 
 Animal &Animal::operator=(Animal const &rhs)
 {
-	std::cout << "Animal Assignation operator called" << std::endl;
+	std::cout << "Assignement operator for Animal called" << std::endl;
 	this->type = rhs.getType();
-	return (*this);
+	return *this;
 }
 
-void Animal::makeSound() const
+void Animal::makeSound(void) const
 {
-	std::cout << "Animal's... sound" << std::endl;
+	std::cout << "The sound every single animal on earth makes... I guess"
+			  << std::endl;
 }
 
-const std::string &Animal::getType() const
+const std::string &Animal::getType(void) const
 {
 	return (this->type);
 }
 
-std::ostream &operator<<(std::ostream &out, const Animal &animal)
+std::ostream &operator<<(std::ostream &ostream, const Animal &instance)
 {
-	out << animal.getType();
+	ostream << instance.getType();
 	;
-	return out;
+	return ostream;
 }

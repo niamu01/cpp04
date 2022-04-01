@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:35:54 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 05:28:20 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 06:40:33 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
-int	main()
+int main()
 {
-	const Animal* meta = new Animal();
+	const Animal *meta = new Animal();
 	std::cout << std::endl;
-	
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+
+	const Animal *dog = new Dog();
+	const Animal *cat = new Cat();
 	std::cout << std::endl;
 
 	std::cout << dog->getType() << " " << std::endl;
@@ -31,7 +31,7 @@ int	main()
 	cat->makeSound();
 	dog->makeSound();
 	std::cout << std::endl;
-	
+
 	delete meta;
 	delete cat;
 	delete dog;
@@ -39,9 +39,9 @@ int	main()
 
 	std::cout << "-------------------------------" << std::endl;
 	std::cout << std::endl;
-	
-	const WrongAnimal* metaWrong = new WrongAnimal();
-	const WrongAnimal* catWrong = new WrongCat();
+
+	const WrongAnimal *metaWrong = new WrongAnimal();
+	const WrongAnimal *catWrong = new WrongCat();
 	std::cout << std::endl;
 
 	std::cout << catWrong->getType() << " " << std::endl;
@@ -50,7 +50,7 @@ int	main()
 	metaWrong->makeSound();
 	catWrong->makeSound();
 	std::cout << std::endl;
-	
+
 	delete metaWrong;
 	delete catWrong;
 }

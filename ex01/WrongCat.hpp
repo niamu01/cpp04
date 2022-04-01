@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 05:29:50 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:51 by yeju             ###   ########.fr       */
+/*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
+/*   Updated: 2022/04/02 06:39:30 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@
 
 class WrongCat : public WrongAnimal
 {
-public:
-	WrongCat();
-	WrongCat(WrongCat const &rhs);
-	~WrongCat();
 
-	void makeSound() const;
+public:
+	WrongCat(void);
+	WrongCat(const WrongCat &src);
+	~WrongCat(void);
+
+	void makeSound(void) const;
+
+private:
 };
 
 #endif

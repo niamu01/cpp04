@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 05:29:50 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:51 by yeju             ###   ########.fr       */
+/*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
+/*   Updated: 2022/04/02 06:39:23 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-#include "WrongAnimal.hpp"
+#include <iostream>
 
-class WrongCat : public WrongAnimal
+class WrongAnimal
 {
-public:
-	WrongCat();
-	WrongCat(WrongCat const &rhs);
-	~WrongCat();
 
-	void makeSound() const;
+public:
+	WrongAnimal(void);
+	WrongAnimal(const WrongAnimal &src);
+	~WrongAnimal(void);
+
+	WrongAnimal &operator=(const WrongAnimal &other);
+
+	void makeSound(void) const;
+
+	const std::string &getType(void) const;
+
+protected:
+	std::string type;
+
+private:
 };
+
+std::ostream &operator<<(std::ostream &ostream, const WrongAnimal &instance);
 
 #endif

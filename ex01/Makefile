@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/02 05:29:37 by yeju              #+#    #+#              #
-#    Updated: 2022/04/02 06:40:36 by yeju             ###   ########.fr        #
+#    Created: 2022/04/02 06:37:25 by yeju              #+#    #+#              #
+#    Updated: 2022/04/02 06:39:16 by yeju             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Animal
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror
 C98 = -std=c++98
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
