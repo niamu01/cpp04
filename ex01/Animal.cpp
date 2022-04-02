@@ -6,42 +6,38 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:37:27 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:07:40 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(void) : type("")
+Animal::Animal() : type("")
 {
-	std::cout << "Default constructor for Animal called" << std::endl;
-	return;
+	std::cout << "Animal Default constructor called" << std::endl;
 }
 
 Animal::Animal(Animal const &src)
 {
-	std::cout << "Copy constructor for Animal called" << std::endl;
+	std::cout << "Animal Copy constructor called" << std::endl;
 	*this = src;
-	return;
 }
 
-Animal::~Animal(void)
+Animal::~Animal()
 {
-	std::cout << "Destructor for Animal called" << std::endl;
-	return;
+	std::cout << "Animal Destructor called" << std::endl;
 }
 
 Animal &Animal::operator=(Animal const &rhs)
 {
-	std::cout << "Assignement operator for Animal called" << std::endl;
+	std::cout << "Animal Assignation operator called" << std::endl;
 	this->type = rhs.getType();
-	return *this;
+	return (*this);
 }
 
 void Animal::makeSound(void) const
 {
-	std::cout << "The sound every single animal on earth makes... I guess"
-			  << std::endl;
+	std::cout << "Animal's... sound" << std::endl;
 }
 
 const std::string &Animal::getType(void) const
@@ -49,9 +45,8 @@ const std::string &Animal::getType(void) const
 	return (this->type);
 }
 
-std::ostream &operator<<(std::ostream &ostream, const Animal &instance)
+std::ostream &operator<<(std::ostream &out, const Animal &animal)
 {
-	ostream << instance.getType();
-	;
-	return ostream;
+	out << animal.getType();
+	return (out);
 }

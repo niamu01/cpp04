@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:13 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:40:57 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #define NUMBER_OF_ANIMALS 8
 
-int main(void)
+int main()
 {
 	Animal *animals[NUMBER_OF_ANIMALS];
 	Brain *brain;

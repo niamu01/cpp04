@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:09 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:13:33 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,17 @@
 
 class Dog : public Animal
 {
-
 public:
-	Dog(void);
-	Dog(const Dog &src);
-	~Dog(void);
+	Dog();
+	Dog(Dog const &src);
+	~Dog();
 
-	virtual Dog &operator=(Dog const &rhs);
-	virtual Animal &operator=(const Animal &other);
+	Dog &operator=(Dog const &rhs); //virtual
+	virtual Animal &operator=(const Animal &rhs);
 
-	virtual void makeSound(void) const;
+	virtual void makeSound() const;
 
-	virtual Brain *getBrain(void) const;
+	virtual Brain *getBrain() const;
 
 private:
 	Brain *brain;

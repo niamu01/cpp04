@@ -6,56 +6,63 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:06 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:12:22 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void)
+Dog::Dog()
 {
+	std::cout << CYAN;
+	std::cout << "Dog Default constructor called" << std::endl;
+	std::cout << RESET;
 	this->type = "Dog";
 	this->brain = new Brain();
-	std::cout << "Default constructor for Dog called" << std::endl;
-	return;
 }
 
-Dog::Dog(Dog const &src)
+Dog::Dog(Dog const &rhs)
 {
-	std::cout << "Copy constructor for Dog called" << std::endl;
-	*this = src;
-	return;
+	std::cout << CYAN;
+	std::cout << "Dog Copy constructor called" << std::endl;
+	std::cout << RESET;
+	*this = rhs;
 }
 
-Dog::~Dog(void)
+Dog::~Dog()
 {
+	std::cout << CYAN;
+	std::cout << "Dog Destructor called" << std::endl;
+	std::cout << RESET;
 	delete this->brain;
-	std::cout << "Destructor for Dog called" << std::endl;
-	return;
 }
 
 Dog &Dog::operator=(Dog const &rhs)
 {
+	std::cout << CYAN;
 	std::cout << "Assignement operator for Dog called" << std::endl;
+	std::cout << RESET;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
-	return *this;
+	return (*this);
 }
 
 Animal &Dog::operator=(Animal const &rhs)
 {
+	std::cout << CYAN;
 	std::cout << "Animal Assignement operator for Dog called" << std::endl;
+	std::cout << RESET;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
-	return *this;
+	return (*this);
 }
 
-void Dog::makeSound(void) const
+void Dog::makeSound() const
 {
-	std::cout << "Wouf!" << std::endl;
+	std::cout << "woof!" << std::endl;
 }
 
-Brain *Dog::getBrain(void) const
+Brain *Dog::getBrain() const
 {
 	return (this->brain);
 }

@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:38:56 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:09:16 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 
 Cat::Cat(void)
 {
+	std::cout << YELLOW;
+	std::cout << "Cat Default constructor called" << std::endl;
+	std::cout << RESET;
 	this->type = "Cat";
 	this->brain = new Brain();
-	std::cout << "Default constructor for Cat called" << std::endl;
-	return;
 }
 
-Cat::Cat(Cat const &src)
+Cat::Cat(Cat const &rhs)
 {
-	std::cout << "Copy constructor for Cat called" << std::endl;
-	*this = src;
-	return;
+	std::cout << YELLOW;
+	std::cout << "Cat Copy constructor called" << std::endl;
+	std::cout << RESET;
+	*this = rhs;
 }
 
-Cat::~Cat(void)
+Cat::~Cat()
 {
+	std::cout << YELLOW;
+	std::cout << "Cat Destructor called" << std::endl;
+	std::cout << RESET;
 	delete this->brain;
-	std::cout << "Destructor for Cat called" << std::endl;
-	return;
 }
 
 Cat &Cat::operator=(Cat const &rhs)
@@ -39,7 +42,7 @@ Cat &Cat::operator=(Cat const &rhs)
 	std::cout << "Assignement operator for Cat called" << std::endl;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
-	return *this;
+	return (*this);
 }
 
 Animal &Cat::operator=(Animal const &rhs)
@@ -47,15 +50,15 @@ Animal &Cat::operator=(Animal const &rhs)
 	std::cout << "Animal Assignement operator for Cat called" << std::endl;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
-	return *this;
+	return (*this);
 }
 
-void Cat::makeSound(void) const
+void Cat::makeSound() const
 {
-	std::cout << "Meeeeeeeow" << std::endl;
+	std::cout << "meow!" << std::endl;
 }
 
-Brain *Cat::getBrain(void) const
+Brain *Cat::getBrain() const
 {
 	return (this->brain);
 }

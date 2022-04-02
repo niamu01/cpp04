@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:38:44 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:40:43 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,26 +18,22 @@
 
 class Animal
 {
-
 public:
-	Animal(void);
+	Animal();
 	Animal(const Animal &src);
-	virtual ~Animal(void);
+	virtual ~Animal();
 
 	virtual Animal &operator=(const Animal &other);
 
-	virtual void makeSound(void) const;
+	virtual void makeSound() const;
+	const std::string &getType() const;
 
-	const std::string &getType(void) const;
-
-	virtual Brain *getBrain(void) const = 0;
+	virtual Brain *getBrain() const = 0;
 
 protected:
 	std::string type;
-
-private:
 };
 
-std::ostream &operator<<(std::ostream &ostream, const Animal &instance);
+std::ostream &operator<<(std::ostream &out, const Animal &animal);
 
 #endif

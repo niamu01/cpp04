@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:30 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:15:36 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ class WrongCat : public WrongAnimal
 {
 
 public:
-	WrongCat(void);
+	WrongCat();
 	WrongCat(const WrongCat &src);
-	~WrongCat(void);
+	~WrongCat();
 
-	void makeSound(void) const;
+	void makeSound() const;
 
 private:
 };

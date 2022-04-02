@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 05:13:40 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:38 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:01:40 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ WrongAnimal &WrongAnimal::operator=(WrongAnimal const &rhs)
 	std::cout << "WrongAnimal Assignation operator called" << std::endl;
 	std::cout << RESET;
 	this->type = rhs.getType();
-	return *this;
+	return (*this);
 }
 
 void WrongAnimal::makeSound() const
@@ -58,6 +58,5 @@ const std::string &WrongAnimal::getType() const
 std::ostream &operator<<(std::ostream &out, const WrongAnimal &wronganimal)
 {
 	out << wronganimal.getType();
-	;
-	return out;
+	return (out);
 }

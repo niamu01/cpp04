@@ -6,34 +6,37 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:27 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:15:26 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat(void)
+WrongCat::WrongCat()
 {
+
+	std::cout << GREEN;
+	std::cout << "WrongCat Default constructor called" << std::endl;
+	std::cout << RESET;
 	this->type = "WrongCat";
-	std::cout << "Default constructor for WrongCat called" << std::endl;
-	return;
 }
 
-WrongCat::WrongCat(WrongCat const &src)
+WrongCat::WrongCat(WrongCat const &rhs)
 {
-	std::cout << "Copy constructor for WrongCat called" << std::endl;
-	*this = src;
-	return;
+	std::cout << GREEN;
+	std::cout << "WrongCat Copy constructor called" << std::endl;
+	std::cout << RESET;
+	*this = rhs;
 }
 
-WrongCat::~WrongCat(void)
+WrongCat::~WrongCat()
 {
-	std::cout << "Destructor for WrongCat called" << std::endl;
-	return;
+	std::cout << GREEN;
+	std::cout << "WrongCat Destructor called" << std::endl;
+	std::cout << RESET;
 }
 
-void WrongCat::makeSound(void) const
+void WrongCat::makeSound() const
 {
-	std::cout << "Meeeeeeeow"
-			  << std::endl;
+	std::cout << "meow!" << std::endl;
 }

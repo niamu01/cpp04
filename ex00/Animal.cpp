@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:06:45 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:03 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:03:21 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,5 @@ const std::string &Animal::getType() const
 std::ostream &operator<<(std::ostream &out, const Animal &animal)
 {
 	out << animal.getType();
-	;
-	return out;
+	return (out);
 }

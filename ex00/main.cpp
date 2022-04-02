@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:35:54 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:40:33 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:00:51 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int main()
 	const Animal *cat = new Cat();
 	std::cout << std::endl;
 
-	std::cout << dog->getType() << " " << std::endl;
-	std::cout << cat->getType() << " " << std::endl;
+	std::cout << dog->getType() << std::endl;
+	std::cout << cat->getType() << std::endl;
 	std::cout << std::endl;
 
 	meta->makeSound();

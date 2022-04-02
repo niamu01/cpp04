@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:23 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:41:18 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,21 @@
 
 #include <iostream>
 
+#define RESET "\e[0m"
+# define GREEN "\e[32m"
+# define PURPLE "\e[35m"
+
 class WrongAnimal
 {
-
 public:
-	WrongAnimal(void);
+	WrongAnimal();
 	WrongAnimal(const WrongAnimal &src);
-	~WrongAnimal(void);
+	~WrongAnimal();
 
-	WrongAnimal &operator=(const WrongAnimal &other);
+	WrongAnimal &operator=(const WrongAnimal &rhs);
 
-	void makeSound(void) const;
-
-	const std::string &getType(void) const;
+	void makeSound() const;
+	const std::string &getType() const;
 
 protected:
 	std::string type;
@@ -35,6 +37,6 @@ protected:
 private:
 };
 
-std::ostream &operator<<(std::ostream &ostream, const WrongAnimal &instance);
+std::ostream &operator<<(std::ostream &out, const WrongAnimal &wronganimal);
 
 #endif

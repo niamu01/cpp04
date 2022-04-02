@@ -6,52 +6,57 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 06:39:20 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 17:41:51 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal(void) : type("")
+WrongAnimal::WrongAnimal() : type("")
 {
-	std::cout << "Default constructor for WrongAnimal called" << std::endl;
-	return;
+	std::cout << PURPLE;
+	std::cout << "WrongAnimal Default constructor called" << std::endl;
+	std::cout << RESET;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const &src)
+WrongAnimal::WrongAnimal(WrongAnimal const &rhs)
 {
-	std::cout << "Copy constructor for WrongAnimal called" << std::endl;
-	*this = src;
-	return;
+	std::cout << PURPLE;
+	std::cout << "WrongAnimal Copy constructor called" << std::endl;
+	std::cout << RESET;
+	*this = rhs;
 }
 
-WrongAnimal::~WrongAnimal(void)
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Destructor for WrongAnimal called" << std::endl;
-	return;
+	std::cout << PURPLE;
+	std::cout << "WrongAnimal Destructor called" << std::endl;
+	std::cout << RESET;
 }
 
 WrongAnimal &WrongAnimal::operator=(WrongAnimal const &rhs)
 {
-	std::cout << "Assignement operator for WrongAnimal called" << std::endl;
+	std::cout << PURPLE;
+	std::cout << "WrongAnimal Assignation operator called" << std::endl;
+	std::cout << RESET;
 	this->type = rhs.getType();
-	return *this;
+	return (*this);
 }
 
-void WrongAnimal::makeSound(void) const
+void WrongAnimal::makeSound() const
 {
-	std::cout << "The sound every single animal on earth makes... I guess"
-			  << std::endl;
+	std::cout << PURPLE;
+	std::cout << "WrongAnimal's... sound" << std::endl;
+	std::cout << RESET;
 }
 
-const std::string &WrongAnimal::getType(void) const
+const std::string &WrongAnimal::getType() const
 {
 	return (this->type);
 }
 
-std::ostream &operator<<(std::ostream &ostream, const WrongAnimal &instance)
+std::ostream &operator<<(std::ostream &out, const WrongAnimal &animal)
 {
-	ostream << instance.getType();
-	;
-	return ostream;
+	out << animal.getType();
+	return (out);
 }
