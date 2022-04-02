@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:11:37 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:27:09 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ private:
 	static const int countIdeas = 100;
 
 public:
-	Brain(void);
+	Brain();
 	Brain(const Brain &src);
-	~Brain(void);
+	~Brain();
 
 	Brain &operator=(const Brain &rhs);
 

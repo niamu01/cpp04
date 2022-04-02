@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:27:52 by yeju             ###   ########.fr       */
+/*   Created: 2022/04/02 19:27:22 by yeju              #+#    #+#             */
+/*   Updated: 2022/04/02 19:27:23 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef CAT_HPP
+#define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
 public:
-	Dog();
-	Dog(Dog const &src);
-	~Dog();
+	Cat();
+	Cat(Cat const &src);
+	~Cat();
 
-	Dog &operator=(Dog const &rhs);
-	virtual Animal &operator=(const Animal &rhs);
+	Cat &operator=(Cat const &rhs);
+	virtual AAnimal &operator=(const AAnimal &rhs);
 
 	virtual void makeSound() const;
 

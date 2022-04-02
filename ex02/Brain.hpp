@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:27:52 by yeju             ###   ########.fr       */
+/*   Created: 2022/04/02 19:26:15 by yeju              #+#    #+#             */
+/*   Updated: 2022/04/02 19:27:05 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include <iostream>
 
-class Dog : public Animal
+class Brain
 {
-public:
-	Dog();
-	Dog(Dog const &src);
-	~Dog();
-
-	Dog &operator=(Dog const &rhs);
-	virtual Animal &operator=(const Animal &rhs);
-
-	virtual void makeSound() const;
-
-	virtual Brain *getBrain() const;
-
 private:
-	Brain *brain;
+	static const int	countIdeas = 100;
+
+public:
+	Brain();
+	Brain(const Brain &src);
+	~Brain();
+
+	Brain &operator=(const Brain &rhs);
+
+	std::string ideas[Brain::countIdeas];
 };
 
 #endif
