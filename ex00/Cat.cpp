@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:28:18 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:39:11 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 18:11:52 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ Cat::~Cat()
 }
 void Cat::makeSound() const
 {
+	std::cout << YELLOW;
 	std::cout << "meow!" << std::endl;
+	std::cout << RESET;
 }

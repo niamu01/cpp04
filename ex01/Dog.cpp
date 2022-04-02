@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:12:22 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:10:26 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ Dog::~Dog()
 Dog &Dog::operator=(Dog const &rhs)
 {
 	std::cout << CYAN;
-	std::cout << "Assignement operator for Dog called" << std::endl;
+	std::cout << "Dog Assignement operator called" << std::endl;
 	std::cout << RESET;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
@@ -50,7 +50,7 @@ Dog &Dog::operator=(Dog const &rhs)
 Animal &Dog::operator=(Animal const &rhs)
 {
 	std::cout << CYAN;
-	std::cout << "Animal Assignement operator for Dog called" << std::endl;
+	std::cout << "Dog: Animal Assignement operator called" << std::endl;
 	std::cout << RESET;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());

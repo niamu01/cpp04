@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:10:27 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:11:37 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	~Cat();
 
 	Cat &operator=(Cat const &rhs);
-	virtual Animal &operator=(const Animal &other);
+	virtual Animal &operator=(const Animal &rhs);
 
 	virtual void makeSound() const;
 

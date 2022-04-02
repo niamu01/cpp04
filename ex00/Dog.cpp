@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 04:28:18 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:39:20 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 18:12:04 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ Dog::~Dog()
 }
 void Dog::makeSound() const
 {
+	std::cout << CYAN;
 	std::cout << "woof!" << std::endl;
+	std::cout << RESET;
 }

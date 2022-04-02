@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:40:57 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:06:23 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,48 @@
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-#define NUMBER_OF_ANIMALS 8
+#define COUNT_ANIMALS 8
 
 int main()
 {
-	Animal *animals[NUMBER_OF_ANIMALS];
+	Animal *animals[COUNT_ANIMALS];
 	Brain *brain;
 
-	for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
+	for (int i = 0; i < COUNT_ANIMALS; i++)
 	{
-		if (i < NUMBER_OF_ANIMALS / 2)
+		if (i < COUNT_ANIMALS / 2)
+		{
+			std::cout << std::endl;
 			animals[i] = new Dog();
+		}
 		else
+		{
+			std::cout << std::endl;
 			animals[i] = new Cat();
+		}
 		std::cout << animals[i]->getType() << std::endl;
 	}
 
-	brain = animals[7]->getBrain();
-	brain->ideas[0] = "I'm hungry";
-	brain->ideas[1] = "That's a strange idea I'm having";
-	brain->ideas[2] = "Ball!!!!!";
-	brain->ideas[3] = "Squirrel!!!!!";
+	std::cout << std::endl;
+		brain = animals[7]->getBrain();
+		brain->ideas[0] = "ideas0";
+		brain->ideas[1] = "ideas1";
+		brain->ideas[2] = "ideas2";
+		brain->ideas[3] = "ideas3";
 	std::cout << animals[7]->getBrain()->ideas[0] << std::endl;
+	std::cout << std::endl;
 
-	*(animals[5]) = *(animals[7]);
-	std::cout << animals[5]->getBrain()->ideas[2] << std::endl;
+	*(animals[3]) = *(animals[7]);
+	*(animals[5]) = *(animals[3]);
+	
+	std::cout << std::endl;
+	std::cout << animals[3]->getBrain()->ideas[2] << std::endl;
+	std::cout << std::endl;
+	std::cout << animals[5]->getBrain()->ideas[3] << std::endl;
 
-	for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
+	for (int i = 0; i < COUNT_ANIMALS; i++)
+	{
+		std::cout << std::endl;
 		delete animals[i];
+	}
 }

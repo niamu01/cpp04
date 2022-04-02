@@ -6,13 +6,13 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:09:16 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:04:39 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void)
+Cat::Cat()
 {
 	std::cout << YELLOW;
 	std::cout << "Cat Default constructor called" << std::endl;
@@ -39,7 +39,9 @@ Cat::~Cat()
 
 Cat &Cat::operator=(Cat const &rhs)
 {
-	std::cout << "Assignement operator for Cat called" << std::endl;
+	std::cout << YELLOW;
+	std::cout << "Cat Assignement operator called" << std::endl;
+	std::cout << RESET;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
 	return (*this);
@@ -47,7 +49,9 @@ Cat &Cat::operator=(Cat const &rhs)
 
 Animal &Cat::operator=(Animal const &rhs)
 {
-	std::cout << "Animal Assignement operator for Cat called" << std::endl;
+	std::cout << YELLOW;
+	std::cout << "Cat: Animal Assignement operator called" << std::endl;
+	std::cout << RESET;
 	this->type = rhs.getType();
 	*(this->brain) = *(rhs.getBrain());
 	return (*this);

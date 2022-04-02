@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:41:42 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:11:37 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@
 class Brain
 {
 private:
-	static const int numberOfIdeas = 100;
+	static const int countIdeas = 100;
 
 public:
 	Brain(void);
 	Brain(const Brain &src);
 	~Brain(void);
 
-	Brain &operator=(const Brain &other);
+	Brain &operator=(const Brain &rhs);
 
-	std::string ideas[Brain::numberOfIdeas];
+	std::string ideas[Brain::countIdeas];
 };
 
 #endif

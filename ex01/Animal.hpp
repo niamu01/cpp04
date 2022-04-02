@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:40:43 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:11:37 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Animal(const Animal &src);
 	virtual ~Animal();
 
-	virtual Animal &operator=(const Animal &other);
+	virtual Animal &operator=(const Animal &rhs);
 
 	virtual void makeSound() const;
 	const std::string &getType() const;
