@@ -20,6 +20,6 @@ protected:
 	std::string type;
 };
 
-std::ostream	&operator<<( std::ostream &ostream, const AAnimal &instance );
+std::ostream	&operator<<( std::ostream &out, const AAnimal &aanimal );
 
 #endif
