@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:50:02 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 20:08:59 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-#define COUNT_AAnimalS 8
+#define COUNT_AANIMALS 8
 
 int main()
 {
-	AAnimal *AAnimals[COUNT_AAnimalS];
+	AAnimal *AAnimals[COUNT_AANIMALS];
 	Brain *brain;
 
-	for (int i = 0; i < COUNT_AAnimalS; i++)
+	for (int i = 0; i < COUNT_AANIMALS; i++)
 	{
-		if (i < COUNT_AAnimalS / 2)
+		if (i < COUNT_AANIMALS / 2)
 		{
 			std::cout << std::endl;
 			AAnimals[i] = new Dog();
@@ -53,7 +53,7 @@ int main()
 	std::cout << std::endl;
 	std::cout << AAnimals[5]->getBrain()->ideas[3] << std::endl;
 
-	for (int i = 0; i < COUNT_AAnimalS; i++)
+	for (int i = 0; i < COUNT_AANIMALS; i++)
 	{
 		std::cout << std::endl;
 		delete AAnimals[i];
