@@ -6,25 +6,25 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:27:51 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:48:46 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 public:
 	Dog();
-	Dog(Dog const &src);
+	Dog(Dog const &rhs);
 	~Dog();
 
 	Dog &operator=(Dog const &rhs);
-	virtual Animal &operator=(const Animal &rhs);
+	virtual AAnimal &operator=(const AAnimal &rhs);
 
 	virtual void makeSound() const;
 

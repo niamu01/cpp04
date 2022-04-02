@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:11:37 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:44:39 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Animal
 {
 public:
 	Animal();
-	Animal(const Animal &src);
+	Animal(const Animal &rhs);
 	virtual ~Animal();
 
 	virtual Animal &operator=(const Animal &rhs);

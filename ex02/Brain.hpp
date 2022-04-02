@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 19:26:15 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:27:05 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:48:07 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <iostream>
 
+#define RESET "\e[0m"
+# define YELLOW "\e[33m"
+# define GREEN "\e[32m"
+# define PURPLE "\e[35m"
+# define CYAN "\e[36m"
+
 class Brain
 {
 private:
@@ -22,7 +28,7 @@ private:
 
 public:
 	Brain();
-	Brain(const Brain &src);
+	Brain(const Brain &rhs);
 	~Brain();
 
 	Brain &operator=(const Brain &rhs);

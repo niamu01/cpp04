@@ -6,7 +6,7 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 17:07:40 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:44:39 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ Animal::Animal() : type("")
 	std::cout << "Animal Default constructor called" << std::endl;
 }
 
-Animal::Animal(Animal const &src)
+Animal::Animal(Animal const &rhs)
 {
 	std::cout << "Animal Copy constructor called" << std::endl;
-	*this = src;
+	*this = rhs;
 }
 
 Animal::~Animal()
@@ -35,12 +35,12 @@ Animal &Animal::operator=(Animal const &rhs)
 	return (*this);
 }
 
-void Animal::makeSound(void) const
+void Animal::makeSound() const
 {
 	std::cout << "Animal's... sound" << std::endl;
 }
 
-const std::string &Animal::getType(void) const
+const std::string &Animal::getType() const
 {
 	return (this->type);
 }

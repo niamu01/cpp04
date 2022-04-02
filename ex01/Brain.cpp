@@ -6,24 +6,24 @@
 /*   By: yeju <yeju@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 06:37:25 by yeju              #+#    #+#             */
-/*   Updated: 2022/04/02 19:05:38 by yeju             ###   ########.fr       */
+/*   Updated: 2022/04/02 19:45:25 by yeju             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 
-Brain::Brain(void)
+Brain::Brain()
 {
 	std::cout << "Brain Default constructor called" << std::endl;
 }
 
-Brain::Brain(Brain const &src)
+Brain::Brain(Brain const &rhs)
 {
 	std::cout << "Brain Copy constructor called" << std::endl;
-	*this = src;
+	*this = rhs;
 }
 
-Brain::~Brain(void)
+Brain::~Brain()
 {
 	std::cout << "Brain Destructor called" << std::endl;
 }

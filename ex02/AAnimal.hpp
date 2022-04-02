@@ -1,5 +1,5 @@
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AAnimal_HPP
+# define AAnimal_HPP
 
 # include <iostream>
 # include "Brain.hpp"
@@ -20,6 +20,6 @@ protected:
 	std::string type;
 };
 
-std::ostream	&operator<<( std::ostream &out, const AAnimal &aanimal );
+std::ostream	&operator<<( std::ostream &out, const AAnimal &AAnimal );
 
 #endif
