@@ -7,6 +7,8 @@
 class AAnimal
 {
 public:
+	AAnimal();
+	AAnimal(const AAnimal &rhs);
 	virtual ~AAnimal();
 
 	virtual AAnimal		&operator=(const AAnimal &rhs) = 0;
